@@ -26,7 +26,7 @@ public class Console
 
         System.out.println("Average square meters of all building: "+service.getAverageSquareMetersOfAllBuildings());
 
-
+        System.out.println("for 4 room and 3 rest room");
         System.out.println("searching...");
         service.searchBuilding(4,3);
         System.out.println("searching finished");
