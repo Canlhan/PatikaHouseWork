@@ -1,6 +1,7 @@
 package com.patikacan.PatikaHouseWork.Service;
 
 import com.patikacan.PatikaHouseWork.Entity.Abstract.BaseBuilding;
+import com.patikacan.PatikaHouseWork.Entity.Abstract.IBuilding;
 import com.patikacan.PatikaHouseWork.Entity.House;
 import com.patikacan.PatikaHouseWork.Entity.SummerHouse;
 import com.patikacan.PatikaHouseWork.Entity.Villa;
@@ -19,6 +20,8 @@ public interface BuildingService
     double getAverageSquareMetersOfHouse();
     double getAverageSquareMetersOfVillas();
     double getAverageSquareMetersOfSummerHouse();
+
+    void searchBuilding(int numberOfRoom,int numberOfRestRoom);
 
 
 

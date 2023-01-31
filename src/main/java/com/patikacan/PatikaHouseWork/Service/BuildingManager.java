@@ -1,6 +1,7 @@
 package com.patikacan.PatikaHouseWork.Service;
 
 import com.patikacan.PatikaHouseWork.Entity.Abstract.BaseBuilding;
+import com.patikacan.PatikaHouseWork.Entity.Abstract.IBuilding;
 import com.patikacan.PatikaHouseWork.Entity.House;
 import com.patikacan.PatikaHouseWork.Entity.SummerHouse;
 import com.patikacan.PatikaHouseWork.Entity.Villa;
@@ -12,7 +13,9 @@ import com.patikacan.PatikaHouseWork.Repository.Concrete.VillaRepositoryImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BuildingManager implements BuildingService{
 
@@ -86,6 +89,23 @@ public class BuildingManager implements BuildingService{
     public double getAverageSquareMetersOfSummerHouse() {
         var summerHouse=getSummerHouses();
         return getSquareMeter(summerHouse)/summerHouse.size();
+    }
+
+    @Override
+    public void searchBuilding(int numberOfRoom, int numberOfRestRoom) {
+
+        ArrayList<BaseBuilding> allBuilding=new ArrayList<>();
+        allBuilding.addAll(getHouses());
+        allBuilding.addAll(getVillas());
+        allBuilding.addAll(getSummerHouses());
+
+        var resultOfSearch=allBuilding.stream().filter(building->building.getNumberOfLivingRoom()==numberOfRestRoom && building.getNumberOfRoom()==numberOfRoom)
+                .collect(Collectors.toList());
+        if(resultOfSearch.size()>0){
+            System.out.println(" there is  "+resultOfSearch.size()+" according to criteria you want");
+        }
+        System.out.println(resultOfSearch);
+
     }
 
 

@@ -9,4 +9,10 @@ public class House extends BaseBuilding implements IBuilding
     public House(int squareMeters, int price, int numberOfRoom, int numberOfLivingRoom) {
         super(squareMeters, price, numberOfRoom, numberOfLivingRoom);
     }
+
+    @Override
+    public String toString() {
+
+        return "House {"+ super.toString()+"}";
+    }
 }

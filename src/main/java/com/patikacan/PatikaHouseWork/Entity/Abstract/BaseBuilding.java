@@ -12,5 +12,13 @@ public abstract class BaseBuilding
      private int numberOfRoom;
      private int numberOfLivingRoom;
 
-
+     @Override
+     public String toString() {
+          return "" +
+                  "squareMeters=" + squareMeters +
+                  ", price=" + price +
+                  ", numberOfRoom=" + numberOfRoom +
+                  ", numberOfLivingRoom=" + numberOfLivingRoom
+                  ;
+     }
 }
