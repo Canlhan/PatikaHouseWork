@@ -4,7 +4,7 @@
 
 
 ### Example Output
-``
+
 total price of Houses: 200000 \
 total price of Villas: 8000000 <br />
 total price of SummerHouse: 6500000 <br />
@@ -17,5 +17,5 @@ searching... <br />
 there is  2 according to criteria you want <br />
 [House {squareMeters=40, price=50000, numberOfRoom=4, numberOfLivingRoom=3}, SummerHouse{squareMeters=200, price=2000000, numberOfRoom=4, numberOfLivingRoom=3}] <br />
 searching finished <br />
-``
+
 
