@@ -15,6 +15,6 @@ for 4 room and 3 rest room \
 searching... \
  there is  2 according to criteria you want \
 [House {squareMeters=40, price=50000, numberOfRoom=4, numberOfLivingRoom=3}, SummerHouse{squareMeters=200, price=2000000, numberOfRoom=4, numberOfLivingRoom=3}] \
-searching finished\
+searching finished
 
 
