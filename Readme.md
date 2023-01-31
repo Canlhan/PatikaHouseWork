@@ -5,7 +5,7 @@
 
 ### Example Output
 ``
-total price of Houses: 200000 <br />
+total price of Houses: 200000\
 total price of Villas: 8000000 <br />
 total price of SummerHouse: 6500000 <br />
 total price of All building: 14700000 <br />
