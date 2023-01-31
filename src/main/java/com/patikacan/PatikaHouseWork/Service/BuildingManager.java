@@ -33,30 +33,30 @@ public class BuildingManager implements BuildingService{
     @Override
     public int getPriceTotalOfHouse() {
 
-        var houses=getHouses();
+        List<House> houses=getHouses();
         return getPrices(houses);
     }
 
     @Override
     public int getPriceTotalOfVilla() {
 
-        var villas=getVillas();
+        List<Villa> villas=getVillas();
 
         return getPrices(villas);
     }
 
     @Override
     public int getPriceTotalOfSummerHouse() {
-        var summerHouses=getSummerHouses();
+        List<SummerHouse> summerHouses=getSummerHouses();
 
         return getPrices(summerHouses);
     }
 
     @Override
     public int getTotalPriceOfAllBuilding() {
-        var houses=getHouses();
-        var villas=getVillas();
-        var summerHouse=getSummerHouses();
+        List<House> houses=getHouses();
+        List<Villa> villas=getVillas();
+        List<SummerHouse> summerHouse=getSummerHouses();
 
         return getPrices(houses)
                 +getPrices(summerHouse)
@@ -65,9 +65,9 @@ public class BuildingManager implements BuildingService{
 
     @Override
     public double getAverageSquareMetersOfAllBuildings() {
-        var houses=getHouses();
-        var villas=getVillas();
-        var summerHouse=getSummerHouses();
+        List<House> houses=getHouses();
+        List<Villa> villas=getVillas();
+        List<SummerHouse> summerHouse=getSummerHouses();
 
         return (getSquareMeter(houses)+getSquareMeter(villas)+getSquareMeter(summerHouse))
                 /(houses.size()+villas.size()+summerHouse.size());
@@ -75,19 +75,19 @@ public class BuildingManager implements BuildingService{
 
     @Override
     public double getAverageSquareMetersOfHouse() {
-        var houses=getHouses();
+        List<House> houses=getHouses();
         return getSquareMeter(houses)/houses.size();
     }
 
     @Override
     public double getAverageSquareMetersOfVillas() {
-        var villas=getVillas();
+        List<Villa> villas=getVillas();
         return getSquareMeter(villas)/villas.size();
     }
 
     @Override
     public double getAverageSquareMetersOfSummerHouse() {
-        var summerHouse=getSummerHouses();
+        List<SummerHouse> summerHouse=getSummerHouses();
         return getSquareMeter(summerHouse)/summerHouse.size();
     }
 
